@@ -6,7 +6,7 @@
 /*   By: edfarias <edfarias@student.42barcelona.com>+#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/03 17:47:15 by edfarias          #+#    #+#             */
-/*   Updated: 2026/08/03 19:51:50 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/03 20:05:25 by edfarias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ void	ft_putnbr(int nb)
 		nb = -nb;
 	}
 	pot10 = 1;
-	while (pot10 < nb)
+	while (pot10 <= nb)
 		pot10 *= 10;
 	pot10 /= 10;
+	if (!pot10)
+		write(1, "0", 1);
 	while (pot10 > 0)
 	{
 		c = '0' + (nb / pot10);
@@ -39,5 +41,12 @@ void	ft_putnbr(int nb)
 /*
 int main() {
 	ft_putnbr(2147483646);
+	ft_putnbr(-2147483645);
+	ft_putnbr(0);
+	ft_putnbr(-0);
+	ft_putnbr(1);
+	ft_putnbr(-1);
+	ft_putnbr(2);
+	ft_putnbr(-2);
 }
 //*/
