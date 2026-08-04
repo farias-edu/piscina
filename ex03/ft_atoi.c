@@ -6,12 +6,13 @@
 /*   By: edfarias <edfarias@student.42barcelona.com>+#+  +:+	   +#+	      */
 /*						  +#+#+#+#+#+	+#+	      */
 /*   Created: 2026/08/03 19:00:00 by edfarias	       #+#    #+#	      */
-/*   Updated: 2026/08/03 19:52:18 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/04 16:59:03 by edfarias         ###   ########.fr       */
 /*									      */
 /* ************************************************************************** */
 
-#include <stdio.h>
+//#include <stdio.h>
 #include <unistd.h>
+//#include <stdlib.h>
 
 int	calc_total(char *str, int start_dig, int final_dig)
 {
@@ -34,18 +35,20 @@ int	calc_total(char *str, int start_dig, int final_dig)
 int	ft_atoi(char *str)
 {
 	int		neg;
-	char	*p;
+	int		i;
 	int		start_dig;
 	int		final_dig;
 
 	neg = 0;
-	p = str;
-	while (*p)
+	i = 0;
+	while (str[i] && (str[i] < '0' || str[i] > '9'))
 	{
-		if (*p == '-')
+		if (str[i] == '-')
 			neg++;
-		p++;
+		i++;
 	}
+	if (!str[i])
+		return (0);
 	start_dig = 0;
 	while ((str[start_dig]) < '0' || (str[start_dig]) > '9')
 		start_dig++;
@@ -61,12 +64,30 @@ int	ft_atoi(char *str)
 /*
 int	main(void)
 {
-	printf("%d\n", ft_atoi(" ---+--+1234ab567"));
-	printf("%d\n", ft_atoi("-1"));
-	printf("%d\n", ft_atoi("1"));
-	printf("%d\n", ft_atoi("0"));
-	printf("%d\n", ft_atoi("-0"));
-	printf("%d\n", ft_atoi(""));
-	printf("%d\n", ft_atoi(" -+-2147483647"));
+	char blanks[] = {'\f', '\n', '\r', '\t', '\v', '-', '\0'};
+	printf("%d\n", ft_atoi(blanks));	
+	printf("%d\n\n", ft_atoi(" 09---+--+1234ab567")); // 09
+	printf("%d\n\n", ft_atoi(" ---+--+12 34ab567")); // -12
+	printf("%d\n\n", ft_atoi(" ---+--+12-34ab567")); // -12
+	printf("%d\n\n", ft_atoi(" ---+---+1234ab567")); // 1234
+	//" ---+--+12 34ab567" -> -12
+	//" ---+--+12-34ab567" -> -12 
+	//" ---+--+1234a b567" -> -1234
+	//" ---+--+1234a+b567" -> -1234
+	//" ---+--+1234a-b567" -> -1234
+	printf("%d\n\n", ft_atoi("2147483647"));
+	printf("%d\n\n", ft_atoi("-2147483648"));
+
+
+	printf("standard: %d\n", atoi(" ---+--+1234ab567"));
+	
+	printf("%d\n\n", ft_atoi("-1"));
+	printf("%d\n\n", ft_atoi("1"));
+	printf("%d\n\n", ft_atoi("0"));
+	printf("%d\n\n", ft_atoi("-0"));
+	printf("%d\n\n", ft_atoi(""));
+	printf("tab: %d\n", ft_atoi("	"));
+	printf("%d\n\n", ft_atoi(" -+-2147483647"));
+
 }
 //*/
