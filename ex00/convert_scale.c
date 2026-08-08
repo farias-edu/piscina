@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_print_exact Busca la clave exacta (string) y la imprime si existe */
 int	ft_print_exact(t_dict *dict, const char *str, int len)

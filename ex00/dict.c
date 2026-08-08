@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_new_node Crea un nuevo nodo (auxiliar, estatica) */
-static t_dict	*ft_new_node(char *key, char *value)
+t_dict	*ft_new_node(char *key, char *value)
 {
 	t_dict	*node;
 

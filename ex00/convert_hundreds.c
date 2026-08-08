@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_print_hundreds_parts Imprime las centenas sin verificar clave
 *  exacta. (Se puede asumir que str[0] != '0')
 */
-static int	ft_print_hundreds_parts(t_dict *dict, const char *str)
+int	ft_print_hundreds_parts(t_dict *dict, const char *str)
 {
 	char	key_unit[2];
 	char	*val_unit;
@@ -69,7 +69,7 @@ int	ft_print_group(t_dict *dict, const char *str, int scale)
 
 	if (ft_is_zero_group(str))
 		return (1);
-	if (ft_print_group_exact(dict, sstr, scale))
+	if (ft_print_group_exact(dict, str, scale))
 		return (1);
 	scale_val = ft_build_scale_key(dict, scale);
 	if (scale > 0 && !scale_val)

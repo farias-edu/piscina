@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_print_first_group: Imprime el primer grupo (tamanio variable). */
-static int	ft_print_first_group(t_dict *dict, const char *num,
+int	ft_print_first_group(t_dict *dict, const char *num,
 		int len, int *scale)
 {
 	int		first_len;
@@ -42,7 +42,7 @@ static int	ft_print_first_group(t_dict *dict, const char *num,
 /* ft_print_rest_groups: Imprime los grupos restantes, 
 *  siempre con un espacio antes.
 */
-static int	ft_print_rest_groups(t_dict *dict, const char *num,
+int	ft_print_rest_groups(t_dict *dict, const char *num,
 		int start, int scale)
 {
 	char	group[4];

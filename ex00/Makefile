@@ -11,7 +11,7 @@
 # **************************************************************************** #
 
 NAME = rush-02
-SRCS = main.c ft_is_number.c utils.c dict.c dict_parse.c convert.c convert_helpers.c convert_scale.c convert_hundreds.c
+SRCS = main.c ft_is_number.c dict.c utils.c dict_parse.c convert.c convert_helpers.c convert_scale.c convert_hundreds.c
 OBJS = $(SRCS:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

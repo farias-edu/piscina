@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 /* ft_is_number Valida que la cadena contenga solo digitos */
-static int	ft_is_number(const char *s)
+int	ft_is_number(const char *s)
 {
 	while (*s)
 	{

@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_process_line Procesa una linea de stdin */
-static void	ft_process_line(t_dict *dict, const char *line)
+static void	ft_process_line_stdin(t_dict *dict, const char *line)
 {
 	if (!ft_is_number(line))
 	{
@@ -49,7 +49,7 @@ static int	ft_process_stdin(t_dict *dict)
 			if (*nl == '\n')
 				*nl = '\0';
 			if (*line != '\0')
-				ft_process_line(dict, line);
+				ft_process_line_stdin(dict, line);
 			line = nl + 1;
 		}
 	}

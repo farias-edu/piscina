@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_strlen Devuelve la longitud de una cadena */
 size_t	ft_strlen(const char *str)
