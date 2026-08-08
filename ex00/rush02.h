@@ -6,7 +6,7 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 15:42:24 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 19:14:28 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/08 20:05:21 by edfarias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,20 +51,22 @@ int				ft_is_zero_group(const char *str);
 int				ft_print_group_exact(t_dict *dict, const char *str, int scale);
 
 /* convert_hundreds.c file */
-static int	ft_print_hundreds_parts(t_dict *dict, const char *str);
-int	ft_print_0_99(t_dict *dict, const char *str, int len);
-int	ft_print_hundreds(t_dict *dict, const char *str);
-int	ft_print_group(t_dict *dict, const char *str, int scale);
+static int		ft_print_hundreds_parts(t_dict *dict, const char *str);
+int				ft_print_0_99(t_dict *dict, const char *str, int len);
+int				ft_print_hundreds(t_dict *dict, const char *str);
+int				ft_print_group(t_dict *dict, const char *str, int scale);
 
 /* convert_helpers.c */
-int	ft_print_key(t_dict *dict, char *key);
-static int	ft_print_teens(t_dict *dict, const char *str);
-static int	ft_print_tens(t_dict *dict, const char *str);
-int	ft_print_two_digits(t_dict *dict, const char *str);
+int				ft_print_key(t_dict *dict, char *key);
+static int		ft_print_teens(t_dict *dict, const char *str);
+static int		ft_print_tens(t_dict *dict, const char *str);
+int				ft_print_two_digits(t_dict *dict, const char *str);
 
 /* convert.c file */
-static int	ft_print_first_group(t_dict *dict, const char *num, int len, int *scale);
-static int	ft_print_rest_groups(t_dict *dict, const char *num, int start, int scale);
-int	ft_convert_number(t_dict *dict, const char *num_str);
+static int		ft_print_first_group(t_dict *dict, const char *num,
+					int len, int *scale);
+static int		ft_print_rest_groups(t_dict *dict, const char *num,
+					int start, int scale);
+int				ft_convert_number(t_dict *dict, const char *num_str);
 
 //#endif
