@@ -6,7 +6,7 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 15:44:39 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 16:23:08 by davpalac         ###   ########.fr       */
+/*   Updated: 2026/08/08 18:32:45 by edfarias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	ft_putstr(const char *str)
 	while (*str)
 	{
 		write(1, str, 1);
-		s++;
+		str++;
 	}
 }
 
