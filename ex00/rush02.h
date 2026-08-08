@@ -46,3 +46,9 @@ int				ft_print_exact(t_dict *dict, const char *str, int len);
 char			*ft_build_scale_key(t_dict *dict, int scale);
 int				ft_is_zero_group(const char *str);
 int				ft_print_group_exact(t_dict *dict, const char *str, int scale);
+
+/* convert_hundreds.c file */
+static int	ft_print_hundreds_parts(t_dict *dict, const char *str);
+int	ft_print_0_99(t_dict *dict, const char *str, int len);
+int	ft_print_hundreds(t_dict *dict, const char *str);
+int	ft_print_group(t_dict *dict, const char *str, int scale);
