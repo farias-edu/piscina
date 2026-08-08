@@ -6,11 +6,11 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 15:44:39 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 18:32:45 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/08 19:55:45 by davpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include <rush02.h>
 
 /* ft_strlen Devuelve la longitud de una cadena */
 size_t	ft_strlen(const char *str)

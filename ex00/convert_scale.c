@@ -6,11 +6,11 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 18:56:21 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 18:58:55 by davpalac         ###   ########.fr       */
+/*   Updated: 2026/08/08 19:53:41 by davpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include <rush02.h>
 
 /* ft_print_exact Busca la clave exacta (string) y la imprime si existe */
 int	ft_print_exact(t_dict *dict, const char *str, int len)
@@ -49,7 +49,7 @@ char	*ft_build_scale_key(t_dict *dict, int scale)
 	return (ft_find_value(dict, key));
 }
 
-/* ft_is_zero_group Verifica si un grupo de 3 dígitos es todo ceros */
+/* ft_is_zero_group Verifica si un grupo de 3 digitos es todo ceros */
 int	ft_is_zero_group(const char *str)
 {
 	int	i;

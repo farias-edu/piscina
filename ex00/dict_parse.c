@@ -6,11 +6,11 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 18:32:45 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 18:41:30 by davpalac         ###   ########.fr       */
+/*   Updated: 2026/08/08 19:55:10 by davpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include <rush02.h>
 
 /* ft_trim Recorta espacios al inicio y final de una cadena */
 static void	ft_trim(char *str)
@@ -25,7 +25,7 @@ static void	ft_trim(char *str)
 	*(end + 1) = '\0';
 }
 
-/* ft_parse_line Parsea una línea: busca ':' y recorta espacios */
+/* ft_parse_line Parsea una linea: busca ':' y recorta espacios */
 static int	ft_parse_line(char *line, char **key, char **value)
 {
 	char	*colon;
@@ -50,7 +50,7 @@ static int	ft_parse_line(char *line, char **key, char **value)
 	return (1);
 }
 
-/* ft_process_line Procesa una línea y la añade al diccionario */
+/* ft_process_line Procesa una linea y la aniade al diccionario */
 static int	ft_process_line(char *line, t_dict **dict)
 {
 	char	*key;
@@ -61,7 +61,7 @@ static int	ft_process_line(char *line, t_dict **dict)
 	return (ft_add_entry(dict, key, value));
 }
 
-/* ft_process_buffer Procesa el buffer completo línea por línea */
+/* ft_process_buffer Procesa el buffer completo linea por linea */
 int	ft_process_buffer(char *buf, t_dict **dict)
 {
 	char	*line;

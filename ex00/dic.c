@@ -6,11 +6,11 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 16:25:43 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 16:54:00 by davpalac         ###   ########.fr       */
+/*   Updated: 2026/08/08 19:54:20 by davpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rush02.h"
+#include <rush02.h>
 
 /* ft_new_node Crea un nuevo nodo (auxiliar, estatica) */
 static t_dict	*ft_new_node(char *key, char *value)

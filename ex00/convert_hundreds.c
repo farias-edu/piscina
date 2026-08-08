@@ -6,7 +6,7 @@
 /*   By: davpalac <davpalac@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/08 19:13:08 by davpalac          #+#    #+#             */
-/*   Updated: 2026/08/08 19:14:32 by davpalac         ###   ########.fr       */
+/*   Updated: 2026/08/08 19:52:57 by davpalac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	ft_print_hundreds_parts(t_dict *dict, const char *str)
 }
 
 /* ft_print_0_99 Imprime 0‑99: primero busca clave exacta, 
-*  si no, usa la descomposición 
+*  si no, usa la descomposicion 
 */
 int	ft_print_0_99(t_dict *dict, const char *str, int len)
 {

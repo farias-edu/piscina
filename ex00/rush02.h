@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//#ifndef RUSH02_H
+//# define RUSH02_H
+
 #include <unistd.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -52,3 +55,16 @@ static int	ft_print_hundreds_parts(t_dict *dict, const char *str);
 int	ft_print_0_99(t_dict *dict, const char *str, int len);
 int	ft_print_hundreds(t_dict *dict, const char *str);
 int	ft_print_group(t_dict *dict, const char *str, int scale);
+
+/* convert_helpers.c */
+int	ft_print_key(t_dict *dict, char *key);
+static int	ft_print_teens(t_dict *dict, const char *str);
+static int	ft_print_tens(t_dict *dict, const char *str);
+int	ft_print_two_digits(t_dict *dict, const char *str);
+
+/* convert.c file */
+static int	ft_print_first_group(t_dict *dict, const char *num, int len, int *scale);
+static int	ft_print_rest_groups(t_dict *dict, const char *num, int start, int scale);
+int	ft_convert_number(t_dict *dict, const char *num_str);
+
+//#endif
