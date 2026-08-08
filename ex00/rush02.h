@@ -24,6 +24,9 @@ typedef struct s_dict
 	struct s_dict	*next;
 }	t_dict;
 
+/* ft_is_number.c file */
+static int		ft_is_number(const char *s);
+
 /* utils.c file */
 size_t			ft_strlen(const char *str);
 void			ft_putstr(const char *str);
@@ -68,5 +71,4 @@ static int		ft_print_first_group(t_dict *dict, const char *num,
 static int		ft_print_rest_groups(t_dict *dict, const char *num,
 					int start, int scale);
 int				ft_convert_number(t_dict *dict, const char *num_str);
-
 //#endif
