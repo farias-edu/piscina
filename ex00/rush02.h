@@ -10,12 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#ifndef RUSH02_H
-//# define RUSH02_H
+#ifndef RUSH02_H
+# define RUSH02_H
 
-#include <unistd.h>
-#include <stdlib.h>
-#include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <fcntl.h>
 
 typedef struct s_dict
 {
@@ -71,4 +71,5 @@ int				ft_print_first_group(t_dict *dict, const char *num,
 int				ft_print_rest_groups(t_dict *dict, const char *num,
 					int start, int scale);
 int				ft_convert_number(t_dict *dict, const char *num_str);
-//#endif
+
+#endif
