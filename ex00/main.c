@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_process_line Procesa una linea de stdin */
+/* ft_process_line Processes a line from stdin */
 static void	ft_process_line_stdin(t_dict *dict, const char *line)
 {
 	if (!ft_is_number(line))
@@ -26,7 +26,7 @@ static void	ft_process_line_stdin(t_dict *dict, const char *line)
 		ft_putstr("\n");
 }
 
-/* ft_process_stdin Lee numeros de stdin (uno por linea) y los convierte */
+/* ft_process_stdin Reads numbers from stdin (one per line) and converts them */
 static int	ft_process_stdin(t_dict *dict)
 {
 	char	buf[1024];
@@ -56,7 +56,7 @@ static int	ft_process_stdin(t_dict *dict)
 	return (1);
 }
 
-/* ft_handle_one_arg Se encarga del caso de un solo argumento (numero) */
+/* ft_handle_one_arg Handles the case of a single argument (number) */
 static int	ft_handle_one_arg(char *arg)
 {
 	t_dict	*dict;
@@ -74,9 +74,9 @@ static int	ft_handle_one_arg(char *arg)
 	return (1);
 }
 
-/* ft_handle_two_args Se encarga del caso de dos argumentos 
-*  (diccionario y numero)
-*/
+/* ft_handle_two_args Handles the case of two arguments
+ * (dictionary and number)
+ */
 static int	ft_handle_two_args(char *dict_file, char *number)
 {
 	t_dict	*dict;
@@ -94,7 +94,7 @@ static int	ft_handle_two_args(char *dict_file, char *number)
 	return (1);
 }
 
-/* main funcion principal */
+/* main Main function */
 int	main(int argc, char **argv)
 {
 	t_dict	*dict;
