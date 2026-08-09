@@ -57,7 +57,7 @@ int				ft_print_group_exact(t_dict *dict, const char *str, int scale);
 int				ft_print_hundreds_parts(t_dict *dict, const char *str);
 int				ft_print_0_99(t_dict *dict, const char *str, int len);
 int				ft_print_hundreds(t_dict *dict, const char *str);
-int				ft_should_use_exact(t_dict *dict, const char *str)
+int				ft_should_use_exact(t_dict *dict, const char *str);
 int				ft_print_group(t_dict *dict, const char *str, int scale);
 
 /* convert_helpers.c */
