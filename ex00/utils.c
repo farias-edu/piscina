@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_strlen Devuelve la longitud de una cadena */
+/* ft_strlen: Return the lenght of a string */
 size_t	ft_strlen(const char *str)
 {
 	size_t	len;
@@ -23,7 +23,7 @@ size_t	ft_strlen(const char *str)
 	return (len);
 }
 
-/* ft_putstr Escribe una cadena en la salida estandar "1" */
+/* ft_putstr: Writes a string in the standard out "1" */
 void	ft_putstr(const char *str)
 {
 	while (*str)
@@ -33,7 +33,7 @@ void	ft_putstr(const char *str)
 	}
 }
 
-/* ft_sstrcmp Compara dos cadenas */
+/* ft_sstrcmp: Compare two strings */
 int	ft_strcmp(const char *s1, const char *s2)
 {
 	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
@@ -44,9 +44,9 @@ int	ft_strcmp(const char *s1, const char *s2)
 	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
 
-/* ft_isspace Detecta caracteres de espacio 
-*  retorna 1 si detecta espacio.
-*  retorna 0 si es cualquier otro valor.
+/* ft_isspace: Detect if cahar is a sapce 
+*  returns 1 if detects a space.
+*  returns 0 if it's any other value.
 */
 int	ft_isspace(int c)
 {
@@ -59,7 +59,7 @@ int	ft_isspace(int c)
 	return (val);
 }
 
-/* ft_strdup Duplica una ccadena en memoria dinamica */
+/* ft_strdup: Duplicates a string in dynamic memory */
 char	*ft_strdup(const char *s)
 {
 	char	*dup;

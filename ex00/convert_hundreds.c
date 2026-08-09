@@ -12,8 +12,9 @@
 
 #include "rush02.h"
 
-/* ft_print_hundreds_parts Imprime las centenas sin verificar clave
-*  exacta. (Se puede asumir que str[0] != '0')
+/* ft_print_hundreds_parts: Print the hundreds without cheking 
+*  the exact key.
+*  (It can be asumed that str[0] != '0')
 */
 int	ft_print_hundreds_parts(t_dict *dict, const char *str)
 {
@@ -40,8 +41,9 @@ int	ft_print_hundreds_parts(t_dict *dict, const char *str)
 	return (1);
 }
 
-/* ft_print_0_99 Imprime 0‑99: primero busca clave exacta, 
-*  si no, usa la descomposicion 
+/* ft_print_0_99: print 0‑99-> First search the key, 
+*  if don't search the exact key, 
+*  then uses the digit descomposition. 
 */
 int	ft_print_0_99(t_dict *dict, const char *str, int len)
 {
@@ -50,8 +52,9 @@ int	ft_print_0_99(t_dict *dict, const char *str, int len)
 	return (ft_print_two_digits(dict, str));
 }
 
-/* ft_print_hundreds: Imprime centenas: primero busca clave exacta, 
-*  si no, descompone.
+/* ft_print_hundreds: Print Strings-> First search the key, 
+*  if it haven't found it, 
+* then uses the digit descomposition.
 */
 int	ft_print_hundreds(t_dict *dict, const char *str)
 {
@@ -62,9 +65,9 @@ int	ft_print_hundreds(t_dict *dict, const char *str)
 	return (ft_print_hundreds_parts(dict, str));
 }
 
-/* ft_should_use_exact: Retorna 0 si el grupo es "100" y la clave "100"
- * tiene el valor "hundred" (para forzar descomposición y obtener "one hundred").
- * En caso contrario, retorna 1.
+/* ft_should_use_exact: Return 0 if the goup is "100" and the key "100"
+ * have the value "hundred" (to force descomposition and obtain "one hundred").
+ * In other cases, return 1.
  */
 int	ft_should_use_exact(t_dict *dict, const char *str)
 {
@@ -84,7 +87,7 @@ int	ft_should_use_exact(t_dict *dict, const char *str)
 	return (1);
 }
 
-/* ft_print_group Imprime un grupo de 3 digitos con su escala */
+/* ft_print_group Print a group of 3 digits with their scale */
 int	ft_print_group(t_dict *dict, const char *str, int scale)
 {
 	char	*scale_val;

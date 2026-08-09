@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_print_first_group: Imprime el primer grupo (tamanio variable). */
+/* ft_print_first_group: Print first group (variable lenght). */
 int	ft_print_first_group(t_dict *dict, const char *num,
 		int len, int *scale)
 {
@@ -39,8 +39,8 @@ int	ft_print_first_group(t_dict *dict, const char *num,
 	return (1);
 }
 
-/* ft_print_rest_groups: Imprime los grupos restantes, 
-*  siempre con un espacio antes.
+/* ft_print_rest_groups: Print the rest of the groups, 
+*  ever make space in the intersection of two groups.
 */
 int	ft_print_rest_groups(t_dict *dict, const char *num,
 		int start, int scale)
@@ -64,7 +64,7 @@ int	ft_print_rest_groups(t_dict *dict, const char *num,
 	return (1);
 }
 
-/* ft_convert_number: Funcion principal de conversion */
+/* ft_convert_number: Principal conversion function (strg to int)*/
 int	ft_convert_number(t_dict *dict, const char *num_str)
 {
 	int	len;

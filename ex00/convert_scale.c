@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_print_exact Busca la clave exacta (string) y la imprime si existe */
+/* ft_print_exact: Search the exactly key (string) and print it if exists. */
 int	ft_print_exact(t_dict *dict, const char *str, int len)
 {
 	char	key[4];
@@ -30,7 +30,7 @@ int	ft_print_exact(t_dict *dict, const char *str, int len)
 	return (ft_print_key(dict, key));
 }
 
-/* ft_build_scale_key Construye la clave de la escala (ej: "1000" para mil) */
+/* ft_build_scale_key: Build the key of the scale (ej: "1000" para mil) */
 char	*ft_build_scale_key(t_dict *dict, int scale)
 {
 	char	key[64];
@@ -49,7 +49,7 @@ char	*ft_build_scale_key(t_dict *dict, int scale)
 	return (ft_find_value(dict, key));
 }
 
-/* ft_is_zero_group Verifica si un grupo de 3 digitos es todo ceros */
+/* ft_is_zero_group: check if a group of 3 digits is all zero */
 int	ft_is_zero_group(const char *str)
 {
 	int	i;
@@ -64,8 +64,8 @@ int	ft_is_zero_group(const char *str)
 	return (1);
 }
 
-/* ft_print_group_exact Intenta imprimir la clave exacta 
-*  del grupo con su escala
+/* ft_print_group_exact: Try to print the exactly key 
+*  of the group with their scale.
 */
 int	ft_print_group_exact(t_dict *dict, const char *str, int scale)
 {

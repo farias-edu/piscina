@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_print_key: Busca e imprime el valor de una clave */
+/* ft_print_key: Search the firs value of a key*/
 int	ft_print_key(t_dict *dict, char *key)
 {
 	char	*val;
@@ -24,7 +24,7 @@ int	ft_print_key(t_dict *dict, char *key)
 	return (1);
 }
 
-/* ft_print_teens: Imprime 10‑19 (clave de dos digitos) */
+/* ft_print_teens: Print 10‑19 (the key of the two numbers form) */
 int	ft_print_teens(t_dict *dict, const char *str)
 {
 	char	key[3];
@@ -35,7 +35,7 @@ int	ft_print_teens(t_dict *dict, const char *str)
 	return (ft_print_key(dict, key));
 }
 
-/* ft_print_tens: Imprime 20‑99 (decena + espacio + unidad) */
+/* ft_print_tens: Print 20‑99 (tens + space + units) */
 int	ft_print_tens(t_dict *dict, const char *str)
 {
 	char	key[3];
@@ -57,7 +57,7 @@ int	ft_print_tens(t_dict *dict, const char *str)
 	return (1);
 }
 
-/* ft_print_two_digits: Imprime un numero de dos digitos (10‑99) */
+/* ft_print_two_digits: Print a two digit number (10‑99) */
 int	ft_print_two_digits(t_dict *dict, const char *str)
 {
 	int		n;
