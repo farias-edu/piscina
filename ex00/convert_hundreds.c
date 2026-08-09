@@ -62,6 +62,28 @@ int	ft_print_hundreds(t_dict *dict, const char *str)
 	return (ft_print_hundreds_parts(dict, str));
 }
 
+/* ft_should_use_exact: Retorna 0 si el grupo es "100" y la clave "100"
+ * tiene el valor "hundred" (para forzar descomposición y obtener "one hundred").
+ * En caso contrario, retorna 1.
+ */
+int	ft_should_use_exact(t_dict *dict, const char *str)
+{
+	char	*h_val;
+
+	if (str[0] == '1' && str[1] == '0' && str[2] == '0')
+	{
+		h_val = ft_find_value(dict, "100");
+		if (h_val)
+		{
+			h_val = ft_find_value(dict, "1");
+			ft_putstr(h_val);
+			ft_putstr(" ");
+			return (0);
+		}
+	}
+	return (1);
+}
+
 /* ft_print_group Imprime un grupo de 3 digitos con su escala */
 int	ft_print_group(t_dict *dict, const char *str, int scale)
 {
@@ -69,7 +91,8 @@ int	ft_print_group(t_dict *dict, const char *str, int scale)
 
 	if (ft_is_zero_group(str))
 		return (1);
-	if (ft_print_group_exact(dict, str, scale))
+	if (ft_should_use_exact(dict, str)
+		&& ft_print_group_exact(dict, str, scale))
 		return (1);
 	scale_val = ft_build_scale_key(dict, scale);
 	if (scale > 0 && !scale_val)
