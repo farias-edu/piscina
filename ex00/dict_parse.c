@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_trim Recorta espacios al inicio y final de una cadena */
+/* ft_trim Trims spaces from the beginning and end of a string */
 void	ft_trim(char *str)
 {
 	char	*end;
@@ -25,7 +25,7 @@ void	ft_trim(char *str)
 	*(end + 1) = '\0';
 }
 
-/* ft_parse_line Parsea una linea: busca ':' y recorta espacios */
+/* ft_parse_line Parses a line: looks for ':' and trims spaces */
 int	ft_parse_line(char *line, char **key, char **value)
 {
 	char	*colon;
@@ -50,7 +50,7 @@ int	ft_parse_line(char *line, char **key, char **value)
 	return (1);
 }
 
-/* ft_process_line Procesa una linea y la aniade al diccionario */
+/* ft_process_line Processes a line and adds it to the dictionary */
 int	ft_process_line(char *line, t_dict **dict)
 {
 	char	*key;
@@ -61,7 +61,7 @@ int	ft_process_line(char *line, t_dict **dict)
 	return (ft_add_entry(dict, key, value));
 }
 
-/* ft_process_buffer Procesa el buffer completo linea por linea */
+/* ft_process_buffer Processes the entire buffer line by line */
 int	ft_process_buffer(char *buf, t_dict **dict)
 {
 	char	*line;
