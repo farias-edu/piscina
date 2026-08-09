@@ -1,6 +1,3 @@
-# FRANCAIS - RAICES ET ELEMENTS POUR RUSH-02
-
-# UNITES
 0: zero
 1: un
 2: deux
@@ -11,8 +8,6 @@
 7: sept
 8: huit
 9: neuf
-
-# 10-19
 10: dix
 11: onze
 12: douze
@@ -23,8 +18,6 @@
 17: dix-sept
 18: dix-huit
 19: dix-neuf
-
-# DIZAINES
 20: vingt
 30: trente
 40: quarante
@@ -33,8 +26,6 @@
 70: soixante-dix
 80: quatre-vingts
 90: quatre-vingt-dix
-
-# CENTAINES
 100: cent
 200: deux cents
 300: trois cents
@@ -44,8 +35,6 @@
 700: sept cents
 800: huit cents
 900: neuf cents
-
-# ECHELLES
 1000: mille
 1000000: million
 1000000000: milliard
@@ -66,7 +55,3 @@
 1000000000000000000000000000000000000000000000000000000: nonillion
 1000000000000000000000000000000000000000000000000000000000: nonilliard
 1000000000000000000000000000000000000000000000000000000000000: decillion
-
-# CONNECTEURS / REGLES
-AND: et
-HYPHEN: -
