@@ -56,7 +56,7 @@ int	ft_add_entry(t_dict **dict, char *key, char *value)
 	return (1);
 }
 
- /* ft_find_value Searches for a key and returns its value (NULL if not found) */
+/* ft_find_value Searches for a key and returns its value (NULL if not found) */
 char	*ft_find_value(t_dict *dict, const char *key)
 {
 	while (dict)
