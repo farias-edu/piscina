@@ -10,10 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_trim Recorta espacios al inicio y final de una cadena */
-static void	ft_trim(char *str)
+void	ft_trim(char *str)
 {
 	char	*end;
 
@@ -26,7 +26,7 @@ static void	ft_trim(char *str)
 }
 
 /* ft_parse_line Parsea una linea: busca ':' y recorta espacios */
-static int	ft_parse_line(char *line, char **key, char **value)
+int	ft_parse_line(char *line, char **key, char **value)
 {
 	char	*colon;
 
@@ -51,7 +51,7 @@ static int	ft_parse_line(char *line, char **key, char **value)
 }
 
 /* ft_process_line Procesa una linea y la aniade al diccionario */
-static int	ft_process_line(char *line, t_dict **dict)
+int	ft_process_line(char *line, t_dict **dict)
 {
 	char	*key;
 	char	*value;

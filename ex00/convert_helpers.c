@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <rush02.h>
+#include "rush02.h"
 
 /* ft_print_key: Busca e imprime el valor de una clave */
 int	ft_print_key(t_dict *dict, char *key)
@@ -25,7 +25,7 @@ int	ft_print_key(t_dict *dict, char *key)
 }
 
 /* ft_print_teens: Imprime 10‑19 (clave de dos digitos) */
-static int	ft_print_teens(t_dict *dict, const char *str)
+int	ft_print_teens(t_dict *dict, const char *str)
 {
 	char	key[3];
 
@@ -36,7 +36,7 @@ static int	ft_print_teens(t_dict *dict, const char *str)
 }
 
 /* ft_print_tens: Imprime 20‑99 (decena + espacio + unidad) */
-static int	ft_print_tens(t_dict *dict, const char *str)
+int	ft_print_tens(t_dict *dict, const char *str)
 {
 	char	key[3];
 	int		ret;
