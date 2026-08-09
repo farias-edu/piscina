@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ft_is_number Valida que la cadena contenga solo digitos */
+/* ft_is_number Validates that the string contains only digits */
 int	ft_is_number(const char *s)
 {
 	while (*s)
