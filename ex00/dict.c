@@ -12,7 +12,7 @@
 
 #include "rush02.h"
 
-/* ft_new_node Crea un nuevo nodo (auxiliar, estatica) */
+/* ft_new_node Creates a new node (helper) */
 t_dict	*ft_new_node(char *key, char *value)
 {
 	t_dict	*node;
@@ -33,9 +33,9 @@ t_dict	*ft_new_node(char *key, char *value)
 	return (node);
 }
 
-/* ft_add_entry Agrega un nodo al final de la lista 
-*  (global, se usa en dict_parse.c) 
-*/
+/* ft_add_entry Adds a node to the end of the list
+ * (used in dict_parse.c)
+ */
 int	ft_add_entry(t_dict **dict, char *key, char *value)
 {
 	t_dict	*new;
@@ -56,7 +56,7 @@ int	ft_add_entry(t_dict **dict, char *key, char *value)
 	return (1);
 }
 
-/* ft_find_value Busca una clave y devuelve su valor (NULL si no existe) */
+ /* ft_find_value Searches for a key and returns its value (NULL if not found) */
 char	*ft_find_value(t_dict *dict, const char *key)
 {
 	while (dict)
@@ -68,7 +68,7 @@ char	*ft_find_value(t_dict *dict, const char *key)
 	return (NULL);
 }
 
-/* ft_free_dict Libera toda la lista (con free) */
+/* ft_free_dict Frees the entire list (using free) */
 void	ft_free_dict(t_dict *dict)
 {
 	t_dict	*next;
@@ -83,7 +83,7 @@ void	ft_free_dict(t_dict *dict)
 	}
 }
 
-/* ft_read_dict Lee el archivo en un buffer y llama al procesador  */
+/* ft_read_dict Reads the file into a buffer and calls the processor */
 t_dict	*ft_read_dict(const char *filename)
 {
 	int		fd;
