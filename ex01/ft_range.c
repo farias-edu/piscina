@@ -6,7 +6,7 @@
 /*   By: edfarias <edfarias@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 11:35:48 by edfarias          #+#    #+#             */
-/*   Updated: 2026/08/10 11:45:45 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/10 18:04:14 by edfarias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@ int	*ft_range(int min, int max)
 	int	t;
 	int	i;
 
-	t = max - min;
-	if (t <= 0)
+	if (min >= max)
 		return (NULL);
+	t = max - min;
 	a = (int *) malloc(sizeof(int) * t);
+	if (!a)
+		return (NULL);
 	i = 0;
 	while (i < t)
 	{
@@ -43,9 +45,11 @@ void f(int a, int b) {
 		for (int i = 0; i < t; i++)
 			printf("%d, ", aa[i]);
 	printf("\n");
+	free(aa);
 }
 
 int main() {
+	f(-9, 20);
 	f(0,0);
 	f(-5,-1);
 	f(-1, -5);

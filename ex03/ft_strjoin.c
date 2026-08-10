@@ -6,7 +6,7 @@
 /*   By: edfarias <edfarias@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/10 13:16:54 by edfarias          #+#    #+#             */
-/*   Updated: 2026/08/10 14:04:16 by edfarias         ###   ########.fr       */
+/*   Updated: 2026/08/10 18:03:25 by edfarias         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,42 +23,41 @@ size_t	ft_strlen(char *str)
 	return (t);
 }
 
-int	ft_copy_pos(int pos, char *dest, char *src)
+char	*ft_strcopy(char *dest, char *src)
 {
-	int	i;
-
-	i = 0;
-	while (src[i])
+	while (*src)
 	{
-		dest[pos + i] = src[i];
-		i++;
+		*dest = *src;
+		dest++;
+		src++;
 	}
-	return (i);
+	return (dest);
 }
 
 char	*ft_strjoin(int size, char **strs, char *sep)
 {
 	char	*join;
+	char	*temp;
 	int		tam_total;
 	int		i;
-	int		k;
 
 	tam_total = 0;
 	i = 0;
 	while (i < size)
 		tam_total += ft_strlen(strs[i++]);
 	join = (char *) malloc((tam_total + 1) * sizeof(char));
-	k = 0;
+	if (!join)
+		return (NULL);
 	i = 0;
+	temp = join;
 	while (i < size - 1)
 	{
-		k += ft_copy_pos(k, join, strs[i]);
-		k += ft_copy_pos(k, join, sep);
-		i++;
+		temp = ft_strcopy(temp, strs[i++]);
+		temp = ft_strcopy(temp, sep);
 	}
 	if (i == size - 1)
-		k += ft_copy_pos(k, join, strs[i]);
-	join[k] = '\0';
+		temp = ft_strcopy(temp, strs[i]);
+	*temp = '\0';
 	return (join);
 }
 
@@ -77,6 +76,7 @@ void f(int size, char **strs, char *sep) {
 
 	char *result = ft_strjoin(size, strs, sep);
 	printf("result: |%s|\n\n", result);
+	free(result);
 }
 
 int main() {
