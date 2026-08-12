@@ -12,7 +12,7 @@ typedef struct s_map
     char    full;
 }   t_map;
 
-static int  read_header(t_map *map, char **line, size_t *capacity)
+int  read_header(t_map *map, char **line, size_t *capacity)
 {
     int length;
 
@@ -26,7 +26,7 @@ static int  read_header(t_map *map, char **line, size_t *capacity)
     return (1);
 }
 
-static void read_row(t_map *map, char **line, size_t *capacity, int row)
+void read_row(t_map *map, char **line, size_t *capacity, int row)
 {
     int column;
 
@@ -74,7 +74,7 @@ void    free_map(t_map *map)
     free(map->array);
 }
 
-static void print_map(t_map *map, int debug)
+void print_map(t_map *map, int debug)
 {
     int row;
     int column;
