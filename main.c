@@ -6,7 +6,7 @@
 /*   By: btrainor <btrainor@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/12 14:38:27 by btrainor          #+#    #+#             */
-/*   Updated: 2026/08/12 15:23:25 by btrainor         ###   ########.fr       */
+/*   Updated: 2026/08/12 17:22:06 by btrainor         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,12 @@
 int main(int argc, char **argv)
 {
     t_map   map;
+	int		i;
+	int		fd;
 
 	if (argc == 1)
 	{
+			fd = 0;
 			map = read_map();
 			if (map.array == NULL)
 				return (1);
@@ -38,7 +41,14 @@ int main(int argc, char **argv)
 	}
 	else
 	{
-		printf("%s\n", argv[2]);
+		i = 1;
+		while (i < argc)
+		{
+			printf("%s\n", argv[i]);
+			fd = open(argv[i], O_RDONLY);
+			//map = read_map(fd);
+			close(fd);
+		}
 	}
     return (0);
 }
