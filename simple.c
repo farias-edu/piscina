@@ -1,16 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
-typedef struct s_map
-{
-    int     **array;
-    int     rows;
-    int     cols;
-    char    empty;
-    char    obstacle;
-    char    full;
-}   t_map;
+#include "ft_bsq.h"
 
 int  read_header(t_map *map, char **line, size_t *capacity)
 {
@@ -174,32 +162,4 @@ void    solve_map(t_map *map, int debug)
         print_map(map, 1);
     }
 
-}
-
-int main(void)
-{
-    t_map   map;
-
-    map = read_map();
-    if (map.array == NULL)
-        return (1);
-
-    int debug = 1;
-    
-    if (debug) {
-        printf("mapa inicial:\n");
-        print_map(&map, 0);
-        printf("conversion para 0 e 1:\n");
-        print_map(&map, 1);
-    }
-    
-    solve_map(&map, debug);
-    
-    if (debug) {
-        printf("solucion final:\n");
-        print_map(&map, 0);
-    }
-
-    free_map(&map);
-    return (0);
 }
