@@ -62,42 +62,7 @@ void    free_map(t_map *map)
     free(map->array);
 }
 
-void print_map(t_map *map, int debug)
-{
-    int row;
-    int column;
 
-    row = 0;
-    while (row < map->rows)
-    {
-        column = 0;
-        while (column < map->cols)
-        {
-            if (debug)
-                putchar('0' + map->array[row][column]);
-            else {
-                if (map->array[row][column] == 1)
-                    putchar(map->empty);
-                else if (map->array[row][column] == 0)
-                    putchar(map->obstacle);
-                else
-                    putchar(map->full);
-            }
-            column++;
-        }
-        row++;
-        putchar('\n');
-    }
-    putchar('\n');
-}
-
-int     min_local(int a, int b)
-{
-    if (a < b)
-        return a;
-    else
-        return b;
-}
 
 int     calc_solve(int **arr, int row, int column)
 {
