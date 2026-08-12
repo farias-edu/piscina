@@ -1,6 +1,5 @@
 #include "ft_bsq.h"
 
-
 void    free_map(t_map *map)
 {
     int row;
@@ -10,8 +9,6 @@ void    free_map(t_map *map)
         free(map->array[row++]);
     free(map->array);
 }
-
-
 
 int     calc_solve(int **arr, int row, int column)
 {
